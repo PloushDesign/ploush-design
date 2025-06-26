@@ -1,40 +1,147 @@
+/* Palette douce aesthetic */
+:root {
+  --beige: #fefaf6;
+  --rose: #fcd5ce;
+  --lilas: #d8e2dc;
+  --sauge: #b5ead7;
+  --noir: #333;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-  background-color: #f7f7f7;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--beige);
+  color: var(--noir);
 }
 
+/* HEADER */
 header {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--rose);
+  padding: 1rem 2rem;
 }
 
-nav a {
-  text-decoration: none;
-  margin: 0 15px;
-  color: #007acc;
+.logo {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-nav a.active {
-  color: #005f99;
-  border-bottom: 2px solid #005f99;
-  padding-bottom: 2px;
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--noir);
+  font-weight: bold;
 }
 
-main section {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-footer {
+/* HERO */
+.hero {
   text-align: center;
-  margin-top: 40px;
+  padding: 4rem 2rem;
+  background: var(--lilas);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--sauge);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+}
+
+/* PARALLAX */
+.parallax {
+  height: 200px;
+  background: url('https://via.placeholder.com/1200x400') center/cover fixed no-repeat;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.thumb img {
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.thumb img:hover {
+  transform: scale(1.05);
+}
+
+/* SLIDER */
+.slider {
+  padding: 2rem;
+  background: var(--rose);
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.slide {
+  background: var(--lilas);
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+/* FREEBIE */
+.freebie {
+  padding: 2rem;
+  text-align: center;
+  background: var(--sauge);
+  color: white;
+}
+
+.freebie form {
+  margin-top: 1rem;
+}
+
+.freebie input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.freebie button {
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--noir);
+  border: none;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+  background: var(--rose);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
   font-size: 0.9em;
   color: #666;
 }
